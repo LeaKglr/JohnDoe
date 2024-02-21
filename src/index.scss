@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,600;1,6..12,600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz@0,6..12;1,6..12&display=swap');
+
+@mixin NunitoRegular {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+
+@mixin NunitoSemiBold {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+
+@mixin WidthHeight {
+  width: 100%;
+  height: auto;
+}
+
+@mixin Card {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+
+@mixin card {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin image {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+@mixin hr {
+  color: #0d6efd;
+  opacity: 1;
+}
+
+@mixin FlexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin MarginBottom {
+  margin-bottom: 100px;
+}
+
+body {
+  @include NunitoRegular;
+  background-color: #eee;
+
+  h1,
+  h2,
+  strong {
+    @include NunitoSemiBold;
+    color: #1e1e1e;
+  }
+
+  p,
+  address,
+  a {
+    color: #444;
+  }
+
+  a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+  }
+
+  $textColor: #ffffff;
+  $bg-color: #444;
+
+  // header
+
+  #header {
+    width: 100%;
+    height: auto;
+
+    nav {
+      a {
+        color: $textColor;
+        margin-left: 20px;
+        padding: 10px 0 10px 10px;
+      }
+
+      #btn {
+        color: #ffffff;
+        margin-right: 5px;
+
+        .navbar-toggler-icon {
+          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+      }
+
+      #navbarText {
+        flex-basis: 100%;
+      }
+
+      #lien {
+        list-style-type: none;
+        padding: 10px 0 0 20px;
+        color: #ffffff;
+      }
+
+      #lien:active {
+        color: #0d6efd;
+      }
+    }
+  }
+
+  // main
+
+  main {
+    strong {
+      color: #000000;
+      font-family:
+        Nunito Sans SemiBold,
+        sans-serif;
+    }
+
+    // Page d'accueil
+
+    #PresentationBloc1 {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url(https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg);
+      background-position: center;
+      width: 100%;
+      height: 90vh;
+      @include FlexColumn;
+      justify-content: center;
+
+      #Bloc1 {
+        @include FlexColumn;
+        align-items: center;
+        justify-content: center;
+      }
+
+      h1,
+      h2 {
+        color: #ffffff;
+        padding: 12px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #ffffff;
+        padding: 12px 24px 12px 24px;
+      }
+    }
+
+    #PresentationBloc2 {
+      @include MarginBottom;
+
+      hr {
+        @include hr;
+      }
+
+      #Apropos {
+        margin-top: 24px;
+      }
+    }
+
+    #PresentationBloc3 {
+      margin: 24px;
+
+      #Competences {
+        margin: 24px 0 24px 0;
+      }
+
+      #JohnDoe {
+        border-radius: 0.5rem;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      p {
+        margin-top: 24px;
+      }
+    }
+
+    // Mes réalisations
+
+    #Realisations {
+      @include WidthHeight;
+      @include MarginBottom;
+
+      #EnTeteRealisations {
+        @include FlexColumn;
+        align-items: center;
+        padding: 20px 0 20px 0;
+
+        hr {
+          @include hr;
+          width: 250px;
+        }
+      }
+
+      #cardbody {
+        @include FlexColumn;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      #imagerealisations {
+        @include image;
+      }
+
+      #Card {
+        @include Card;
+      }
+
+      #card {
+        @include card;
+      }
+
+      #Bouton {
+        @include FlexColumn;
+        align-items: center;
+      }
+    }
+
+    // Mes services
+
+    #Services {
+      @include WidthHeight;
+      @include MarginBottom;
+
+      #EnTeteServices {
+        @include FlexColumn;
+        align-items: center;
+        padding: 20px 0 20px 0;
+
+        hr {
+          @include hr;
+          width: 250px;
+        }
+      }
+
+      #PresentationServices {
+        width: 100%;
+        height: auto;
+      }
+
+      #Article {
+        @include FlexColumn;
+        align-items: center;
+        padding: 50px;
+      }
+
+      #icon {
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        color: #0d6efd;
+        transition: color 0.5s;
+      }
+
+      #Article:hover #icon {
+        color: #cde1f8;
+      }
+
+      h1,
+      h2,
+      p,
+      strong,
+      i {
+        text-align: center;
+      }
+
+      h1,
+      h2 {
+        margin: 24px;
+      }
+
+      #imageservices {
+        @include image;
+      }
+    }
+
+    // Blog
+
+    #Blog {
+      @include MarginBottom;
+      @include WidthHeight;
+
+      #imageblog {
+        @include image;
+      }
+
+      #EnTeteBlog {
+        @include FlexColumn;
+        align-items: center;
+        padding: 20px 0 20px 0;
+
+        hr {
+          @include hr;
+          width: 250px;
+        }
+      }
+
+      #Bouton {
+        margin-left: 15px;
+      }
+
+      #Card {
+        @include Card;
+      }
+
+      #card {
+        @include card;
+      }
+    }
+
+    // Me contacter
+
+    .MeContacter {
+      background-image: linear-gradient(
+          rgba(0, 105, 255, 0.5),
+          rgba(0, 105, 255, 0.5)
+        ),
+        url(https://cdn.pixabay.com/photo/2012/12/17/19/14/keyboard-70506_1280.jpg);
+      background-position: center;
+      @include WidthHeight;
+      @include MarginBottom;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0 50px 0;
+
+      #EnTeteMeContacter {
+        @include FlexColumn;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+
+        hr {
+          @include hr;
+          width: 250px;
+        }
+      }
+
+      #PresentationMeContacter {
+        width: 90%;
+        height: 90%;
+        background-color: #eee;
+        border-radius: 0.5rem;
+        padding: 20px 0 20px 0;
+      }
+
+      a {
+        text-decoration: none;
+        color: #000000;
+      }
+
+      #Form {
+        @include FlexColumn;
+        justify-content: center;
+
+        hr {
+          @include hr;
+        }
+      }
+
+      #Coordonnees {
+        hr {
+          @include hr;
+        }
+      }
+
+      #Bouton {
+        @include FlexColumn;
+        align-items: center;
+      }
+
+      #map-container-google-2 {
+        height: 60%;
+        @include FlexColumn;
+
+        iframe {
+          height: 100%;
+        }
+      }
+    }
+
+    #accordionFlushExample {
+      #collapseOne {
+        a {
+          text-decoration: none;
+          color: #444;
+        }
+      }
+    }
+  }
+
+  // footer
+
+  footer {
+    width: 100%;
+    height: auto;
+    margin-bottom: 50px;
+
+    #Contact {
+      #adress,
+      #Telephone {
+        list-style-type: none;
+      }
+
+      a {
+        text-decoration: none;
+        color: #444;
+      }
+
+      #RS {
+        i {
+          padding: 10px;
+        }
+
+        #BtnGitHub {
+          width: 30px;
+          height: 15px;
+          border: none;
+          background-color: transparent;
+        }
+      }
+    }
+
+    #pages,
+    #realisations,
+    #articles {
+      list-style: url("../font/greater-than-solid-4.svg");
+
+      #link {
+        text-decoration: none;
+        color: #444;
+      }
+    }
+
+    #copyright {
+      background-color: #1e1e1e;
+
+      .btnCopyright {
+        background-color: transparent;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #scrolling-link {
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        height: 60px;
+        background-color: #1e1e1e;
+        color: #ffffff;
+        z-index: 1000;
+      }
+
+      .btn {
+        display: flex;
+        flex-direction: column;
+      }
+
+      p {
+        color: #ffffff;
+        margin-left: 5px;
+        margin-top: 15px;
+      }
+
+      .hidden {
+        display: none;
+      }
+    }
+  }
+}

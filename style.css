@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,600;1,6..12,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz@0,6..12;1,6..12&display=swap");
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100, "YTLC" 500;
+  background-color: #eee;
+}
+body h1,
+body h2,
+body strong {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "wdth" 100, "YTLC" 500;
+  color: #1e1e1e;
+}
+body p,
+body address,
+body a {
+  color: #444;
+}
+body a:hover {
+  color: #ffffff;
+  opacity: 0.8;
+}
+body #header {
+  width: 100%;
+  height: auto;
+}
+body #header nav a {
+  color: #ffffff;
+  margin-left: 20px;
+  padding: 10px 0 10px 10px;
+}
+body #header nav #btn {
+  color: #ffffff;
+  margin-right: 5px;
+}
+body #header nav #btn .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+body #header nav #navbarText {
+  flex-basis: 100%;
+}
+body #header nav #lien {
+  list-style-type: none;
+  padding: 10px 0 0 20px;
+  color: #ffffff;
+}
+body #header nav #lien:active {
+  color: #0d6efd;
+}
+body main strong {
+  color: #000000;
+  font-family: Nunito Sans SemiBold, sans-serif;
+}
+body main #PresentationBloc1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg);
+  background-position: center;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body main #PresentationBloc1 #Bloc1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body main #PresentationBloc1 h1,
+body main #PresentationBloc1 h2 {
+  color: #ffffff;
+  padding: 12px;
+}
+body main #PresentationBloc1 a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 12px 24px 12px 24px;
+}
+body main #PresentationBloc2 {
+  margin-bottom: 100px;
+}
+body main #PresentationBloc2 hr {
+  color: #0d6efd;
+  opacity: 1;
+}
+body main #PresentationBloc2 #Apropos {
+  margin-top: 24px;
+}
+body main #PresentationBloc3 {
+  margin: 24px;
+}
+body main #PresentationBloc3 #Competences {
+  margin: 24px 0 24px 0;
+}
+body main #PresentationBloc3 #JohnDoe {
+  border-radius: 0.5rem;
+  width: 100%;
+  object-fit: cover;
+}
+body main #PresentationBloc3 p {
+  margin-top: 24px;
+}
+body main #Realisations {
+  width: 100%;
+  height: auto;
+  margin-bottom: 100px;
+}
+body main #Realisations #EnTeteRealisations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 20px 0;
+}
+body main #Realisations #EnTeteRealisations hr {
+  color: #0d6efd;
+  opacity: 1;
+  width: 250px;
+}
+body main #Realisations #cardbody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+body main #Realisations #imagerealisations {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+body main #Realisations #Card {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+body main #Realisations #card {
+  display: flex;
+  justify-content: center;
+}
+body main #Realisations #Bouton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main #Services {
+  width: 100%;
+  height: auto;
+  margin-bottom: 100px;
+}
+body main #Services #EnTeteServices {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 20px 0;
+}
+body main #Services #EnTeteServices hr {
+  color: #0d6efd;
+  opacity: 1;
+  width: 250px;
+}
+body main #Services #PresentationServices {
+  width: 100%;
+  height: auto;
+}
+body main #Services #Article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+body main #Services #icon {
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  color: #0d6efd;
+  transition: color 0.5s;
+}
+body main #Services #Article:hover #icon {
+  color: #cde1f8;
+}
+body main #Services h1,
+body main #Services h2,
+body main #Services p,
+body main #Services strong,
+body main #Services i {
+  text-align: center;
+}
+body main #Services h1,
+body main #Services h2 {
+  margin: 24px;
+}
+body main #Services #imageservices {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+body main #Blog {
+  margin-bottom: 100px;
+  width: 100%;
+  height: auto;
+}
+body main #Blog #imageblog {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+body main #Blog #EnTeteBlog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0 20px 0;
+}
+body main #Blog #EnTeteBlog hr {
+  color: #0d6efd;
+  opacity: 1;
+  width: 250px;
+}
+body main #Blog #Bouton {
+  margin-left: 15px;
+}
+body main #Blog #Card {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+body main #Blog #card {
+  display: flex;
+  justify-content: center;
+}
+body main .MeContacter {
+  background-image: linear-gradient(rgba(0, 105, 255, 0.5), rgba(0, 105, 255, 0.5)), url(https://cdn.pixabay.com/photo/2012/12/17/19/14/keyboard-70506_1280.jpg);
+  background-position: center;
+  width: 100%;
+  height: auto;
+  margin-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 50px 0;
+}
+body main .MeContacter #EnTeteMeContacter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+body main .MeContacter #EnTeteMeContacter hr {
+  color: #0d6efd;
+  opacity: 1;
+  width: 250px;
+}
+body main .MeContacter #PresentationMeContacter {
+  width: 90%;
+  height: 90%;
+  background-color: #eee;
+  border-radius: 0.5rem;
+  padding: 20px 0 20px 0;
+}
+body main .MeContacter a {
+  text-decoration: none;
+  color: #000000;
+}
+body main .MeContacter #Form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body main .MeContacter #Form hr {
+  color: #0d6efd;
+  opacity: 1;
+}
+body main .MeContacter #Coordonnees hr {
+  color: #0d6efd;
+  opacity: 1;
+}
+body main .MeContacter #Bouton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .MeContacter #map-container-google-2 {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+}
+body main .MeContacter #map-container-google-2 iframe {
+  height: 100%;
+}
+body main #accordionFlushExample #collapseOne a {
+  text-decoration: none;
+  color: #444;
+}
+body footer {
+  width: 100%;
+  height: auto;
+  margin-bottom: 50px;
+}
+body footer #Contact #adress,
+body footer #Contact #Telephone {
+  list-style-type: none;
+}
+body footer #Contact a {
+  text-decoration: none;
+  color: #444;
+}
+body footer #Contact #RS i {
+  padding: 10px;
+}
+body footer #Contact #RS #BtnGitHub {
+  width: 30px;
+  height: 15px;
+  border: none;
+  background-color: transparent;
+}
+body footer #pages,
+body footer #realisations,
+body footer #articles {
+  list-style: url("../font/greater-than-solid-4.svg");
+}
+body footer #pages #link,
+body footer #realisations #link,
+body footer #articles #link {
+  text-decoration: none;
+  color: #444;
+}
+body footer #copyright {
+  background-color: #1e1e1e;
+}
+body footer #copyright .btnCopyright {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body footer #copyright #scrolling-link {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  height: 60px;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  z-index: 1000;
+}
+body footer #copyright .btn {
+  display: flex;
+  flex-direction: column;
+}
+body footer #copyright p {
+  color: #ffffff;
+  margin-left: 5px;
+  margin-top: 15px;
+}
+body footer #copyright .hidden {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
